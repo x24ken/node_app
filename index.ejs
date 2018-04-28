@@ -12,7 +12,14 @@
     </head>
     <div role="main">
         <p><%=content %></p>
-        <p><a href="/other">Other Pageに移動 &gt;&gt;</a></p>
+        <p><table style="width: 400px;">
+            <tr><th>伝言です！</th></tr>
+            <tr><td><%=data.msg %></td></tr>
+        </table></p>
+        <p>your last message:<%= cookie_data %></p> 
+        <form method="post" action="/">
+        <p>MESSAGE <input type="text" name="msg">
+        <input type="submit" value="送信"></p>
     </div>
 </body>
 
